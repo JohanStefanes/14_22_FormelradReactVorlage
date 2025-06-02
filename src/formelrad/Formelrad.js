@@ -10,7 +10,7 @@ export default function Formelrad() {
         r: "",
         p: "",
         message: ""
-    })
+    });
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -23,7 +23,7 @@ export default function Formelrad() {
         if (values.p === "") count++;
         if (count !== 2) {
             setValues(values => ({...values, message: "2 Felder leer lassen, 2 Felder ausfüllen"}));
-        }else {
+        } else {
             setValues(values => ({...values, message: ""}));
 
             if (values.u === "" && values.i === "") {
